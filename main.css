@@ -3536,3 +3536,20 @@ input, select, textarea {
 			}
 
 	}
+
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+		border-spacing: 5px;
+	  }
+
+	  td, th {
+		border: 0px solid black;
+		text-align: left;
+		padding: 5px;
+	  }
+	  .column {
+		float: left;
+		width: 50%;
+	  }
