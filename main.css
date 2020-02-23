@@ -9,23 +9,36 @@ body > header {
 
 .logo {	border-bottom: none; }
 .logo img { width: 300px; vertical-align: bottom; }
-header a { margin-right: 45px; line-height: 85px; }
+header a { line-height: 2; margin-right: 1ex; }
+@media (min-width: 601px) {
+    header a { margin-right: 45px; line-height: 85px; }
+}
 header a:nth-child(n+2) { color: #00a120; border: none; }
 header a:nth-child(n+2):hover { border-bottom: 2px solid #00a120; }
 
-.schedule { background: white; font-family: 'Helvetica Neue', 'Helvetica', sans-serif; }
-.schedule td { padding: 1ex .5in; font-weight: 300; color: #444; font-size: 95%; }
-.schedule td:first-child { text-align: right; vertical-align: top; border-right: 2px solid black; min-width: 12ex; }
-.schedule tbody tr:nth-child(2n+1) { background-color: transparent; }
+#schedule {
+    font-family: 'Helvetica Neue', 'Helvetica', sans-serif; text-align: left;
+    position: relative; margin-left: 15ex; border-left: 2px solid black;
+    padding-left: 2ex;
+}
+#schedule > div { margin: 1.5em 0; }
+#schedule time {
+    font-size: 150%; font-weight: 300; color: #444;
+    line-height: 1.5em; text-align: right;
+    width: 12ex; left: -13ex; position: absolute;
+}
+#schedule h2 { color: #00a120; font-size: 150%; font-weight: 500; margin: .25em 0; }
 
-.schedule td:nth-child(2):first-line { font-size: 125%; }
-.schedule td:first-child { visibility: hidden; }
+#schedule div > div time { display: none; }
+#schedule h3 { color: #444; font-size: 125%; font-weight: 500; margin: 0; }
+#schedule p { color: #444; margin-bottom: 1em; font-size: 95%; }
 
-.schedule .section td { font-size: 150%; font-weight: 500; }
-.schedule .section td:first-child {	color: #333; visibility: inherit; }
-.schedule .section td:nth-child(2):first-line { color: #00a120; }
-
-
+@media (max-width: 600px) {
+    #schedule { margin-left: 0; border: none; padding: 0; }
+    #schedule time { font-size: 100%; position: static; text-align: left; display: block; }
+    #schedule h3 { font-size: 115%; }
+    #schedule > div { margin: 2em 0; }
+}
 
 /* Everything below is stuff from the WiDS Copenhagen site */
 
