@@ -18,6 +18,8 @@ header a:nth-child(n+2):hover { border-bottom: 2px solid #00a120; }
 
 #header h2, #header h3 { font-weight: 200; }
 
+#header h2.alert { background: yellow; color: #ff8000; font-weight: bold; margin: 1em 0; padding: 1em; }
+
 #schedule {
     font-family: 'Helvetica Neue', 'Helvetica', sans-serif; text-align: left;
     position: relative; margin-left: 15ex; border-left: 2px solid black;
