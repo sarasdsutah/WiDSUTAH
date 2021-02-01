@@ -23,7 +23,7 @@ header a:nth-child(n+2):hover { border-bottom: 2px solid #00a120; }
 #schedule {
     font-family: 'Helvetica Neue', 'Helvetica', sans-serif; text-align: left;
     position: relative; margin-left: 15ex; border-left: 2px solid black;
-    padding-left: 2ex;
+    padding-left: 2ex; padding-top: 1px;
 }
 #schedule > div { margin: 1.5em 0; }
 #schedule time {
@@ -31,11 +31,14 @@ header a:nth-child(n+2):hover { border-bottom: 2px solid #00a120; }
     line-height: 1.5em; text-align: right;
     width: 12ex; left: -13ex; position: absolute;
 }
+#schedule div + h1 { margin-top: 4em; }
 #schedule h2 { color: #00a120; font-size: 150%; font-weight: 500; margin: .25em 0; }
 
-#schedule div > div time { display: none; }
+#schedule div > div time { /* display: none; */ font-size: 80%; margin-top: .5em; }
 #schedule h3 { color: #444; font-size: 125%; font-weight: 500; margin: 0; }
-#schedule p { color: #444; margin-bottom: 1em; font-size: 95%; }
+#schedule p { color: #444; margin: 0; font-size: 95%; }
+#schedule div div { margin-bottom: 1em; }
+#schedule div > div ul { padding-left: 1em; margin-top: 0; list-style: none; }
 
 @media (max-width: 600px) {
     #schedule { margin-left: 0; border: none; padding: 0; }
